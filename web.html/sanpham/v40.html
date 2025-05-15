@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="../css/style.css">
+    <header class="head">
+        <div class="top-header">
+            <div class="header-container">
+                <img src="../hinhanh/z6483453818737_46624a65874fa2093edc0f4e8cdaff20.jpg" onclick="window.location.href='../main.html'" style="cursor: pointer;">
+                <h1 onclick="window.location.href='../main.html'" style="cursor: pointer;">PhoneWorld.com</h1>
+            </div>
+            <div style="flex-grow: 1; display: flex; justify-content: center;">
+                <input type="text" placeholder="Bạn cần tìm gì?" id="inputForm">
+                <button onclick="goToProductPage()">Tìm kiếm</button>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <button onclick="window.location.href='../signup.html'">Đăng ký</button>
+                <button onclick="window.location.href='../login.html'">Đăng nhập</button>
+                <button onclick="window.location.href='../cart.html'">Giỏ hàng</button>
+            </div>
+        </div>
+        <div class="header_main">
+            <ul class="main-menu">
+                <li><a href="../phone.html"><img src="https://cdn.tgdd.vn/content/phonne-24x24.png"> Điện thoại</a></li>
+                <li class="dropdown">
+                    <a href="#">
+                        <img src="../hinhanh/mcu.png" alt="Máy cũ"> Máy cũ, Thu cũ
+                    </a>
+                    <div class="dropdown-content">
+                        <h4>Máy cũ, Thu cũ</h4>
+                        <div class="sub-menu">
+                            <a href="#"><img src="../hinhanh/maycu.png" alt=""><span>Máy cũ giá rẻ</span></a>
+                            <a href="#"><img src="../hinhanh/thumaycu.png" alt=""><span>Thu cũ đổi mới</span></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="contact.html"><img src="../hinhanh/lienhe.png">Liên hệ</a></li>
+            </ul>
+        </div>
+    </header>
+    <h2>Điện thoại vivo V40 5G 12GB/256GB</h2>
+    <img src="../hinhanh/v40.jpg" width="300px" id="imgPhone">
+    <h2>Giá: 3.490.000đ</h2>
+    <button onclick="addToCart()">Thêm vào giỏ hàng</button>
+    <h2>Cấu hình & bộ nhớ</h2>
+    <p>Hệ điều hành: Android 14</p>
+    <p>Chip xử lý (CPU): Snapdragon 7 Gen 3 8 nhân</p>
+    <p>Tốc độ CPU: 1 nhân 2.63 GHz, 3 nhân 2.4 GHz & 4 nhân 1.8 GHz</p>
+    <p>Chip đồ họa (GPU): Adreno 720</p>
+    <p>RAM: 12 GB</p>
+    <p>Dung lượng lưu trữ: 256 GB</p>
+    <p>Dung lượng còn lại (khả dụng) khoảng: 228 GB</p>
+    <p>Danh bạ: Không giới hạn</p>
+
+</body>
+<footer class="footer">
+    <div class="footer-left">
+        <p>&copy; 2025 thegioididong.com - Bản quyền thuộc về chúng tôi.</p>
+        <p>Liên hệ: support@thegioicongnghe.com</p>
+        <p>Tổng đài hỗ trợ miễn phí</p>
+        <p>Mua hàng - bảo hành: 1800.0101 (7h30 - 22h00)</p>
+        <p>Khiếu nại: 1800.0202 (8h00 - 21h30)</p>
+    </div>
+    <div class="footer-right">
+        <p>Kết nối với Phoneworld</p>
+        <div class="social-icons">
+            <img src="../hinhanh/icon_fb.jpg" width="50px" alt="Facebook">
+            <img src="../hinhanh/icon_zalo.jpg" width="50px" alt="Zalo">
+            <img src="../hinhanh/icon_tt.jpg" width="50px" alt="Twitter">
+            <img src="../hinhanh/icon_yt.jpg" width="50px" alt="Youtube">
+            <img src="../hinhanh/icon_ig.jpg" width="50px" alt="Instagram">
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</footer>
+</html>

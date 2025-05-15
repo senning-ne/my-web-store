@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Sản Phẩm</title>
+</head>
+<body>
+    <link rel="stylesheet" href="css/style.css">
+    <img src="hinhanh/qc.png" width="1500px">
+    <header class="head">
+        <div class="top-header">
+            <div class="header-container">
+                <img src="hinhanh/z6483453818737_46624a65874fa2093edc0f4e8cdaff20.jpg" onclick="window.location.href='main.html'" style="cursor: pointer;">
+                <h1 onclick="window.location.href='main.html'" style="cursor: pointer;">PhoneWorld</h1>
+            </div>
+            <div style="flex-grow: 1; display: flex; justify-content: center;">
+                <input type="text" placeholder="Bạn cần tìm gì?" id="inputForm">
+                <button onclick="goToProductPage()">Tìm kiếm</button>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <button onclick="window.location.href='signup.html'">Đăng ký</button>
+                <button onclick="window.location.href='login.html'">Đăng nhập</button>
+                <button onclick="window.location.href='cart.html'">Giỏ hàng</button>
+            </div>
+        </div>
+        <div class="header_main">
+            <ul class="main-menu">
+                <li><a href="phone.html"><img src="https://cdn.tgdd.vn/content/phonne-24x24.png"> Điện thoại</a></li>
+                <li class="dropdown">
+                    <a href="#">
+                        <img src="hinhanh/mcu.png" alt="Máy cũ"> Máy cũ, Thu cũ
+                    </a>
+                    <div class="dropdown-content">
+                        <h4>Máy cũ, Thu cũ</h4>
+                        <div class="sub-menu">
+                            <a href="#"><img src="hinhanh/maycu.png" alt=""><span>Máy cũ giá rẻ</span></a>
+                            <a href="#"><img src="hinhanh/thumaycu.png" alt=""><span>Thu cũ đổi mới</span></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="contact.html"><img src="hinhanh/lienhe.png">Liên hệ</a></li>
+            </ul>
+        </div>
+    </header>
+    <strong>Trang chủ > Điện thoại </strong>
+    <div>
+        <img src="hinhanh/phonebanner.png" width="49%">
+        <img src="hinhanh/phonebanner2.png" width="49%">
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <h2>Danh mục sản phẩm</h2>
+    </div>
+    <div>
+        <label for="brandFilter" style="font-size: 20px;">Chọn Hãng:</label>
+        <div id="brandFilter" class="brand-buttons">
+            <button class="brand-btn" onclick="filterByBrand('OPPO')">OPPO</button>
+            <button class="brand-btn" onclick="filterByBrand('Vivo')">Vivo</button>
+            <button class="brand-btn" onclick="filterByBrand('Samsung')">Samsung</button>
+            <button class="brand-btn" onclick="filterByBrand('Xiaomi')">Xiaomi</button>
+            <button class="brand-btn" onclick="filterByBrand('iPhone')">iPhone</button>
+            <button class="brand-btn" onclick="filterByBrand('Realme')">Realme</button>
+            <button class="brand-btn" onclick="filterByBrand('')">Tất cả</button>
+        </div>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <button onclick="sortProdAsc()">Giá tăng dần</button>
+        <button onclick="sortProdDesc()">Giá giảm dần</button>
+    </div>
+    <h2 style="display: none;" id="countProd"></h2>
+    <div class="product" id="product-list">
+        <div class="product-item">
+            <h3> Samsung Galaxy A26 5G 6GB/128GB</h3>
+            <img src="hinhanh/a26.jpg" width="250px">
+            <p>Giá: 6.490.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html';">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>Realme C75x 8GB/128GB</h3>
+            <img src="hinhanh/c75x.jpg" width="250px">
+            <p>Giá: 4.190.000đ</p>
+            <button onclick="addViewedProd(this)" >Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html';">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>iPhone 16 Pro Max 256GB</h3>
+            <img src="hinhanh/16promax.jpg" width="250px">
+            <p>Giá: 18.490.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html';">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3> Samsung Galaxy A56 5G 8GB/128GB</h3>
+            <img src="hinhanh/a56.jpg" width="250px">
+            <p>Giá: 18.490.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html';">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3> Samsung Galaxy S25 Ultra 5G</h3>
+            <img src="hinhanh/s25ultra.jpg" width="250px">
+            <p>Giá: 18.490.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html';">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3> Xiaomi Redmi Note 14 Pro 8GB/256GB</h3>
+            <img src="hinhanh/note14.jpg" width="250px">
+            <p>Giá: 18.490.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html';">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>OPPO A3x 4GB/64GB</h3>
+            <img src="hinhanh/a3x.jpg" width="250px">
+            <p>Giá: 3.490.000</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html';">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3> Realme 13+ 5G 12GB/256GB</h3>
+            <img src="hinhanh/13+.jpg" width="250px">
+            <p>Giá: 7.790.000</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html';">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3> Vivo V40 5G 12GB/256GB</h3>
+            <img src="hinhanh/v40.jpg" width="250px">
+            <p>Giá: 12.990.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html';">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>iPhone 15 Pro Max 256GB</h3>
+            <img src="hinhanh/15pro.jpg" width="250px">
+            <p>Giá: 29.990.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>iPhone 14 128GB</h3>
+            <img src="hinhanh/ip14.jpg" width="250px">
+            <p>Giá: 13.090.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>iPhone 12 64GB</h3>
+            <img src="hinhanh/ip12.jpg" width="250px">
+            <p>Giá: 10.590.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>Samsung Galaxy Z Fold6 5G 12GB/256GB</h3>
+            <img src="hinhanh/ssZF.jpg" width="250px">
+            <p>Giá: 35.690.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>OPPO Find N5 5G 16GB/512GB</h3>
+            <img src="hinhanh/oppoF.jpg" width="250px">
+            <p>Giá: 44.990.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3> OPPO Reno12 5G 12GB/512GB</h3>
+            <img src="hinhanh/oppo12.jpg" width="250px">
+            <p>Giá: 12.490.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3> OPPO Find N3 Flip 5G 12GB/256GB Hồng</h3>
+            <img src="hinhanh/oppoFN3.jpg" width="250px">
+            <p>Giá: 16.490.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3> Realme Note 60 6GB/128GB</h3>
+            <img src="hinhanh/re60.jpg" width="250px">
+            <p>Giá: 3.690.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>Xiaomi Redmi Note 14 8GB/128GB</h3>
+            <img src="hinhanh/xia14.jpg" width="250px">
+            <p>Giá: 5.290.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>Xiaomi 15 Ultra 5G 16GB/512GB</h3>
+            <img src="hinhanh/xia15U.jpg" width="250px">
+            <p>Giá: 32.990.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>Xiaomi 15 5G 12GB/512GB</h3>
+            <img src="hinhanh/xia15.jpg" width="250px">
+            <p>Giá: 22.990.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>Vivo Y29 8GB/128GB</h3>
+            <img src="hinhanh/viy29.jpg" width="250px">
+            <p>Giá: 6.490.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>Vivo Y19s 6GB/128GB</h3>
+            <img src="hinhanh/viy19.jpg" width="250px">
+            <p>Giá: 4.090.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>Vivo V30e 5G 12GB/256GB</h3>
+            <img src="hinhanh/viv30.jpg" width="250px">
+            <p>Giá: 8.990.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>Vivo Y28 8GB/128GB</h3>
+            <img src="hinhanh/viy28.jpg" width="250px">
+            <p>Giá: 5.090.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>Samsung Galaxy M15 5G 6GB/128GB</h3>
+            <img src="hinhanh/ssm.jpg" width="250px">
+            <p>Giá: 4.490.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>OPPO Reno12 F 5G 12GB/256GB</h3>
+            <img src="hinhanh/oppoF5G.jpg" width="250px">
+            <p>Giá: 9.190.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>OPPO Reno12 F 5G 12GB/256GB</h3>
+            <img src="hinhanh/oppoF5G.jpg" width="250px">
+            <p>Giá: 9.190.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>Realme 12 8GB/256GB</h3>
+            <img src="hinhanh/realme-12.jpg" width="250px">
+            <p>Giá: 6.390.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>Realme 14T 5G 8GB/256GB</h3>
+            <img src="hinhanh/realme14t.jpg" width="250px">
+            <p>Giá: 8.290.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>iPhone 14 Plus 128GB</h3>
+            <img src="hinhanh/ip14plu.jpg" width="250px">
+            <p>Giá: 17.990.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+        <div class="product-item">
+            <h3>Xiaomi Redmi 14C 6GB/128GB</h3>
+            <img src="hinhanh/xia14c.jpg" width="250px">
+            <p>Giá: 3.390.000đ</p>
+            <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+            <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-left">
+            <p>&copy; 2025 thegioididong.com - Bản quyền thuộc về chúng tôi.</p>
+            <p>Liên hệ: support@thegioicongnghe.com</p>
+            <p>Tổng đài hỗ trợ miễn phí</p>
+            <p>Mua hàng - bảo hành: 1800.0101 (7h30 - 22h00)</p>
+            <p>Khiếu nại: 1800.0202 (8h00 - 21h30)</p>
+        </div>
+        <div class="footer-right">
+            <p>Kết nối với Phoneworld</p>
+            <div class="social-icons">
+                <img src="hinhanh/icon_fb.jpg" width="50px" alt="Facebook">
+                <img src="hinhanh/icon_zalo.jpg" width="50px" alt="Zalo">
+                <img src="hinhanh/icon_tt.jpg" width="50px" alt="Twitter">
+                <img src="hinhanh/icon_yt.jpg" width="50px" alt="Youtube">
+                <img src="hinhanh/icon_ig.jpg" width="50px" alt="Instagram">
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/viewedProd.js"></script>
+<script src="js/script.js"></script>
+</html>

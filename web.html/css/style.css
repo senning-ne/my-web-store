@@ -1,0 +1,600 @@
+.header-container img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin-right: 15px; /* Tạo khoảng cách giữa logo và tên shop */
+}
+/*banner*/
+.banner-wrapper {
+    position: relative; 
+    width: 900px;
+    margin: 0 auto;
+  }
+  
+  .banner-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    width: 200%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-slide {
+    width: 50%;
+  }
+  
+  button.prev,
+  button.next {
+    position: absolute; /* Đặt vị trí tuyệt đối so với .banner-wrapper */
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 10; /* Đảm bảo nút nằm trên banner */
+  }
+  
+  button.prev:hover,
+  button.next:hover {
+    opacity: 1;
+  }
+  
+  button.prev {
+    left: 10px; /* Điều chỉnh vị trí bên trái */
+  }
+  
+  button.next {
+    right: 10px; /* Điều chỉnh vị trí bên phải */
+  }
+/* Main header */
+.head {
+    
+    background-color: #FFD500;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+/* Top header */
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Phân bố khoảng cách đều */
+    width: 100%;
+    padding: 0 20px; /* Thêm padding để các phần tử không sát mép */
+}
+
+/* Logo và tên shop */
+.top-header .header-container,
+.top-header h1 {
+    display: flex;
+    align-items: center; /* Canh giữa logo và tên shop theo chiều dọc */
+}
+
+/* Phần tên shop */
+.top-header h1 {
+    cursor: pointer;
+    margin-left: 10px; /* Thêm khoảng cách giữa logo và tên */
+}
+
+/* Ô tìm kiếm */
+#inputForm {
+    width: 250px;
+    border-radius: 30px;
+    height: 25px;
+    margin-right: 20px; /* Tạo khoảng cách giữa ô tìm kiếm và nút tìm kiếm */
+}
+
+/* Nút tìm kiếm */
+button {
+    border-radius: 30px;
+}
+
+/* Căn chỉnh các nút đăng ký, đăng nhập, giỏ hàng */
+.top-header button {
+    margin-left: 10px;
+}
+
+/* Khu vực menu chính */
+.header_main {
+    width: 100%;
+    background-color: #FFD500;
+    margin-top: 10px;
+}
+
+.main-menu {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu li {
+    margin: 0 15px;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.main-menu img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+/* Dropdown mặc định ẩn */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    background-color: white;
+    min-width: 220px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Nội dung trong dropdown */
+.dropdown-content h4 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sub-menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sub-menu a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.sub-menu img {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #FFD500, #FFB300);
+    border-radius: 12px;
+    padding: 8px;
+    margin-bottom: 5px;
+}
+
+.sub-menu span {
+    font-size: 14px;
+}
+
+.viewed-Product {
+    background-color: #f0f4f8; /* Nền nhẹ */
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    place-items: center;
+    transition: all 0.3s ease;
+}
+
+.viewed-Product > .product-item {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 320px; /* Giới hạn kích thước tối đa */
+}
+
+.viewed-Product > .product-item:hover {
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Đổ bóng đậm hơn */
+}
+
+
+.product-item{
+    display: flex;
+    flex-direction: column;        /* Sắp xếp các phần tử theo chiều dọc */
+    align-items: center;           /* Căn giữa theo chiều ngang */
+    justify-content: center;
+    gap: 10px;
+}
+
+.product-item:hover{
+    transform : scale(1.05);
+    box-shadow : 0 4px 8px rgba(0,0,0,0.2)
+}
+
+.product-in-cart {
+    background-color:#E8E6E6;
+    display: grid;
+    gap: 30px;
+    padding: 20px; /* Thụt lề 2 bên toàn bộ grid */
+    border-radius: 30px;
+    width: 90%; justify-content: center;
+    margin: 0 auto;
+}
+
+.product {
+    background-color: #DDDDDD;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px; /* Thụt lề 2 bên toàn bộ grid */
+    border-radius: 30px;
+}
+
+.product > div {
+    background-color: white;
+    border-radius: 16px; /* Bo góc */
+    padding: 16px; /* Thụt lề trong mỗi div */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.product > div:hover {
+    transform: translateY(-8px); /* Hiệu ứng nổi khi hover */
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #e8e6e6;
+    font-size: 20px; /* Tăng kích thước chữ cơ bản lên 16px (hoặc giá trị bạn muốn) */
+    color: #333;
+}
+
+.footer-left {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer-right p {
+    margin-bottom: 20px;
+    font-size: 25px; /* Tăng kích thước chữ cho các thẻ <p> bên phải */
+}
+
+.footer-right .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-right .social-icons img {
+    width: 50px;
+    height: 50px;
+}
+
+.phonebanner{
+    display: flex;
+}
+/*login*/
+.login-body {
+    background-color: #f4f4f4; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.login-container {
+
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 400px; 
+    text-align: center; 
+    padding: 30px; 
+}
+
+.login-header-title {
+    color: #007bff; /* Thiết lập màu chữ cho tiêu đề đăng nhập là màu xanh dương (#007bff) */
+}
+
+.login-form {
+    display: flex; /* Sử dụng flexbox để sắp xếp các phần tử trong form đăng nhập */
+    flex-direction: column; /* Sắp xếp các phần tử trong form theo chiều dọc */
+}
+
+.login-form-label {
+    text-align: left; /* Căn trái nhãn của các trường nhập liệu trong form đăng nhập */
+}
+
+.login-form-input {
+    border: 1px solid rgb(37, 38, 39); 
+    border-radius: 4px; 
+    padding: 10px; 
+    margin-bottom: 15px;
+}
+
+.login-form-button {
+    border-radius: 4px; 
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+}
+.login-form-button:hover {
+    background-color: #1e7e34; 
+}
+/*đăng ký*/
+.register-body {
+    background-color: #f4f4f4; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.register-container {
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    width: 400px; 
+    text-align: center; 
+    padding: 30px; 
+}
+
+.register-header-title {
+    color: #0056b3; 
+}
+
+.register-header-description {
+    color: #6c757d; 
+    margin-bottom: 15px; 
+}
+
+.register-form {
+    display: flex; /* Sử dụng flexbox để sắp xếp các phần tử trong form đăng ký */
+    flex-direction: column; /* Sắp xếp các phần tử trong form theo chiều dọc */
+    align-items: stretch; /* Kéo dài các phần tử theo chiều ngang để lấp đầy vùng chứa */
+}
+
+.register-form-group {
+    margin-bottom: 15px; /* Tạo khoảng cách 15px phía dưới mỗi nhóm trường nhập liệu */
+}
+
+.register-form-label {
+    margin-bottom: 5px; /* Tạo khoảng cách 5px phía dưới mỗi nhãn */
+    font-weight: bold; /* In đậm nhãn */
+    text-align: left; /* Căn trái nhãn */
+    display: block; /* Hiển thị nhãn như một khối (block-level element) */
+}
+
+.register-form-input {
+    padding: 10px; /* Thêm khoảngPadding 10px bên trong các trường nhập liệu */
+    border: 1px solid #000; /* Thêm viền 1px màu đen cho các trường nhập liệu */
+    border-radius: 4px; /* Bo tròn góc của các trường nhập liệu */
+    box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi tổng kích thước phần tử */
+    width: 100%; /* Thiết lập chiều rộng của trường nhập liệu là 100% vùng chứa */
+}
+
+.register-form-button{
+    background-color: #0056b3; /* Thiết lập màu nền cho nút đăng ký là màu xanh đậm (#0056b3) */
+    color: #fff; /* Thiết lập màu chữ cho nút đăng ký là màu trắng */
+    padding: 10px 15px; /* Thêm khoảngPadding 10px trên/dưới và 15px trái/phải cho nút */
+    border: none; /* Loại bỏ viền của nút */
+    border-radius: 4px; /* Bo tròn góc của nút */
+    font-size: 16px; /* Thiết lập kích thước chữ cho nút là 16px */
+    transition: background-color ease; /* Thêm hiệu ứng chuyển màu nền mượt mà */
+}
+.register-form-button:hover {
+    background-color: #1e7e34; /* Thay đổi màu nền khi di chuột qua nút đăng ký thành màu xanh lá cây đậm (#1e7e34) */
+}
+
+/*buy*/
+.buy-body {
+    font-family: sans-serif; /* Sử dụng font chữ sans-serif mặc định */
+    background-color: #f8f9fa; /* Thiết lập màu nền cho trang mua hàng là màu xám nhạt (#f8f9fa) */
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử trên trang */
+    justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    min-height: 100vh; /* Thiết lập chiều cao tối thiểu của trang bằng 100% chiều cao viewport */
+    margin: 0; /* Loại bỏ margin mặc định của body */
+}
+
+.buy-container {
+    background-color: #fff; /* Thiết lập màu nền cho khung chứa mua hàng là màu trắng */
+    padding: 30px; /* Thêm khoảngPadding 30px bên trong khung chứa */
+    border-radius: 8px; /* Bo tròn góc của khung chứa */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Thêm hiệu ứng đổ bóng cho khung chứa */
+    width: 500px; /* Thiết lập chiều rộng của khung chứa là 500px */
+}
+
+.buy-header {
+    text-align: center; /* Căn giữa nội dung văn bản trong header mua hàng */
+    margin-bottom: 25px; /* Tạo khoảng cách 25px phía dưới header */
+}
+
+.buy-header-title {
+    color: #007bff; /* Thiết lập màu chữ cho tiêu đề mua hàng là màu xanh dương (#007bff) */
+    margin-bottom: 5px; /* Tạo khoảng cách 5px phía dưới tiêu đề */
+}
+
+.buy-header-description {
+    color: #6c757d; /* Thiết lập màu chữ cho mô tả mua hàng là màu xám (#6c757d) */
+    margin-bottom: 20px; /* Tạo khoảng cách 20px phía dưới mô tả */
+}
+
+.buy-form-title {
+    margin-bottom: 20px; /* Tạo khoảng cách 20px phía dưới tiêu đề form mua hàng */
+    color: #343a40; /* Thiết lập màu chữ cho tiêu đề form mua hàng là màu xám đậm (#343a40) */
+}
+
+.buy-form {
+    display: flex; /* Sử dụng flexbox để sắp xếp các phần tử trong form mua hàng */
+    flex-direction: column; /* Sắp xếp các phần tử trong form theo chiều dọc */
+}
+
+.buy-form-group {
+    margin-bottom: 18px; /* Tạo khoảng cách 18px phía dưới mỗi nhóm trường nhập liệu */
+}
+
+.buy-form-label {
+    display: block; /* Hiển thị nhãn như một khối */
+    margin-bottom: 5px; /* Tạo khoảng cách 5px phía dưới mỗi nhãn */
+    font-weight: bold; /* In đậm nhãn */
+    color: #000; /* Thiết lập màu chữ cho nhãn là màu đen */
+}
+
+.buy-form-input {
+    padding: 12px; /* Thêm khoảngPadding 12px bên trong các trường nhập liệu */
+    border: 1px solid #000; /* Thêm viền 1px màu đen cho các trường nhập liệu */
+    border-radius: 4px; /* Bo tròn góc của các trường nhập liệu */
+    box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi tổng kích thước phần tử */
+    width: 100%; /* Thiết lập chiều rộng của trường nhập liệu là 100% vùng chứa */
+    font-size: 16px; /* Thiết lập kích thước chữ cho trường nhập liệu là 16px */
+}
+
+.buy-form-input:focus {
+    border-color: #007bff; /* Thay đổi màu viền khi trường nhập liệu được focus thành màu xanh dương (#007bff) */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Thêm hiệu ứng đổ bóng nhẹ khi focus */
+    outline: none; /* Loại bỏ đường viền focus mặc định của trình duyệt */
+}
+
+.buy-form-button {
+    background-color: #28a745; /* Thiết lập màu nền cho nút mua hàng là màu xanh lá cây (#28a745) */
+    color: #fff; /* Thiết lập màu chữ cho nút mua hàng là màu trắng */
+    padding: 12px 20px; /* Thêm khoảngPadding 12px trên/dưới và 20px trái/phải cho nút */
+    border: none; /* Loại bỏ viền của nút */
+    border-radius: 4px; /* Bo tròn góc của nút */
+    cursor: pointer; /* Thay đổi con trỏ chuột thành hình bàn tay khi di chuột qua nút */
+    font-size: 18px; /* Thiết lập kích thước chữ cho nút là 18px */
+    transition: background-color 0.3s ease; /* Thêm hiệu ứng chuyển màu nền mượt mà trong 0.3 giây */
+}
+.buy-form-button:hover {
+    background-color: #1e7e34; /* Thay đổi màu nền khi di chuột qua nút mua hàng thành màu xanh lá cây đậm hơn (#1e7e34) */
+}
+#total {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử con */
+    justify-content: center; /* Căn giữa theo chiều ngang nội dung bên trong */
+    align-items: center; /* Căn giữa theo chiều dọc nội dung bên trong */
+    flex-direction: column; /* Sắp xếp chữ ở trên và ảnh ở dưới (tùy chọn) */
+}
+
+/*contact*/
+.lh-page {
+    font-family: Arial, sans-serif; /* Sử dụng font chữ Arial hoặc sans-serif mặc định */
+    margin: 20px; /* Thêm margin 20px xung quanh trang liên hệ */
+    background-color: #f4f4f4; /* Thiết lập màu nền cho trang liên hệ là màu xám nhạt (#f4f4f4) */
+}
+
+.lh-title {
+    text-align: center; /* Căn giữa tiêu đề trang liên hệ */
+    color: #333; /* Thiết lập màu chữ cho tiêu đề là màu xám đậm (#333) */
+}
+
+.lh-contact-form {
+    max-width: 500px; /* Đặt chiều rộng tối đa của form liên hệ là 500px */
+    margin: 20px auto; /* Tạo khoảng cách 20px ở trên và dưới, tự động căn giữa form theo chiều ngang */
+    background-color: #fff; /* Đặt màu nền cho form liên hệ là màu trắng */
+    padding: 20px; /* Tạo khoảng cách lề bên trong form là 20px */
+    border-radius: 8px; /* Bo tròn các góc của form với bán kính 8px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng đổ bóng nhẹ cho form */
+}
+
+.lh-form-group label {
+    display: block; /* Hiển thị nhãn như một khối, chiếm toàn bộ chiều ngang */
+    margin-bottom: 8px; /* Tạo khoảng cách 8px phía dưới nhãn */
+    font-weight: bold; /* In đậm chữ của nhãn */
+    color: #555; /* Đặt màu chữ cho nhãn là màu xám trung bình */
+}
+
+.lh-form-group input[type="text"],
+.lh-form-group input[type="email"],
+.lh-form-group textarea {
+    width: calc(100% - 12px); /* Đặt chiều rộng của các trường nhập liệu là 100% trừ đi 12px (2 * padding) */
+    padding: 8px; /* Tạo khoảng cách lề bên trong các trường nhập liệu là 8px */
+    margin-bottom: 15px; /* Tạo khoảng cách 15px phía dưới mỗi trường nhập liệu */
+    border: 1px solid #ccc; /* Tạo đường viền 1px màu xám nhạt cho các trường nhập liệu */
+    border-radius: 4px; /* Bo tròn các góc của các trường nhập liệu với bán kính 4px */
+    box-sizing: border-box; /* Bao gồm padding và border vào tổng chiều rộng và chiều cao của phần tử */
+    font-size: 16px; /* Đặt kích thước chữ cho các trường nhập liệu là 16px */
+}
+
+.lh-form-group textarea {
+    resize: vertical; /* Cho phép người dùng thay đổi chiều cao của textarea theo chiều dọc */
+    min-height: 100px; /* Đặt chiều cao tối thiểu của textarea là 100px */
+}
+
+.lh-submit-button {
+    background-color: #007bff; /* Đặt màu nền cho nút gửi là màu xanh dương */
+    color: white; /* Đặt màu chữ cho nút gửi là màu trắng */
+    padding: 10px 15px; /* Tạo khoảng cách lề bên trong nút là 10px trên/dưới và 15px trái/phải */
+    border: none; /* Loại bỏ đường viền của nút */
+    border-radius: 4px; /* Bo tròn các góc của nút với bán kính 4px */
+    cursor: pointer; /* Thay đổi con trỏ chuột thành hình bàn tay khi di chuột qua nút */
+    font-size: 16px; /* Đặt kích thước chữ cho nút là 16px */
+}
+
+.lh-submit-button:hover {
+    background-color: #0056b3; /* Thay đổi màu nền của nút khi di chuột qua thành màu xanh dương đậm hơn */
+}
+
+.lh-heading-3,
+.lh-heading-4 {
+    margin-top: 0; /* Loại bỏ khoảng cách lề phía trên của các thẻ h3 và h4 */
+    margin-bottom: 15px; /* Tạo khoảng cách 15px phía dưới các thẻ h3 và h4 */
+}
+/*lọc sp*/
+#brandFilter {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.brand-btn {
+    background-color: #dfdfb6;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.brand-btn:hover {
+    background-color: #f8fc04;
+}
+

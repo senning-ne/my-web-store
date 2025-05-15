@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang đăng ký</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body class="register-body">
+    <div class="register-container">
+        <div class="header-container">
+            <img src="hinhanh/z6483453818737_46624a65874fa2093edc0f4e8cdaff20.jpg">
+        </div>
+        <header class="register-header">
+            <h1 class="register-header-title">PhoneWorld.com</h1>
+        </header>
+        <p class="register-description">Điền thông tin đăng ký:</p>
+        <form class="register-form" action="/register" method="post">
+            <div class="register-form-group">
+                <label class="register-form-label" for="username">Tên đăng nhập:</label>
+                <input class="register-form-input" type="text" name="username" id="username">
+            </div>
+            <div class="register-form-group">
+                <label class="register-form-label" for="password">Mật khẩu:</label>
+                <input class="register-form-input" type="password" name="password" id="password">
+            </div>
+            <div class="register-form-group">
+                <label class="register-form-label" for="email">Email:</label>
+                <input class="register-form-input" type="email" name="email" id="email">
+            </div>
+            <div class="register-form-group">
+                <label class="register-form-label" for="PhoneNumber">Số điện thoại:</label>
+                <input class="register-form-input" type="tel" name="PhoneNumber" id="PhoneNumber">
+            </div>
+            <button class="register-form-button" type="submit">Đăng ký</button>
+        </form>
+        <a href="index.html">Quay lại Trang chủ</a>
+    </div>
+</body>
+</html>

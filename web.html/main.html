@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Bán Hàng</title>
+</head>
+<link rel="stylesheet" href="css/style.css">
+<body>
+    <header class="head">
+        <div class="top-header">
+            <div class="header-container">
+                <img src="hinhanh/z6483453818737_46624a65874fa2093edc0f4e8cdaff20.jpg" onclick="window.location.href='main.html'" style="cursor: pointer;">
+                <h1 onclick="window.location.href='main.html'" style="cursor: pointer;">PhoneWorld.com</h1>
+            </div>
+            <div style="flex-grow: 1; display: flex; justify-content: center;">
+                <input type="text" placeholder="Bạn cần tìm gì?" id="inputForm">
+                <button onclick="goToProductPage()">Tìm kiếm</button>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <button onclick="window.location.href='login.html'">Đăng Ký/Đăng Nhập</button>
+                <button onclick="window.location.href='cart.html'">Giỏ hàng</button>
+            </div>
+        </div>
+        <div class="header_main">
+            <ul class="main-menu">
+                <li><a href="phone.html"><img src="https://cdn.tgdd.vn/content/phonne-24x24.png"> Điện thoại</a></li>
+                <li class="dropdown">
+                    <a href="#">
+                        <img src="hinhanh/mcu.png" alt="Máy cũ"> Máy cũ, Thu cũ
+                    </a>
+                    <div class="dropdown-content">
+                        <h4>Máy cũ, Thu cũ</h4>
+                        <div class="sub-menu">
+                            <a href="#"><img src="hinhanh/maycu.png" alt=""><span>Máy cũ giá rẻ</span></a>
+                            <a href="#"><img src="hinhanh/thumaycu.png" alt=""><span>Thu cũ đổi mới</span></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="contact.html"><img src="hinhanh/lienhe.png">Liên hệ</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="sale">
+            <h2 style="margin-left: 600px;">Khuyến Mãi Đặc Biệt!</h2>
+            <p style="margin-left: 590px;">Giảm Giá Lên Đến 70% Trong Hôm Nay.</p>
+            <img src="hinhanh/qc.png" width="1500px" height="90px"> 
+            <div class="banner-wrapper">
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="banner-container">
+                  <div class="carousel-wrapper">
+                    <img src="hinhanh/image.png" alt="Banner 1" class="carousel-slide">
+                    <img src="hinhanh/banner2.jpg" alt="Banner 2" class="carousel-slide">
+                  </div>
+                </div>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+              </div>
+        
+        <h2 style="margin-left: 600px;">Các Sản Phẩm Đã Xem</h2>
+        <div class="viewed-Product" id="container-viewed">
+            
+        </div>
+        <h2 style="margin-left: 600px;">Sản Phẩm Nổi Bật</h2>
+        <div class="product" id="product-list">
+            <div class="product-item">
+                <h3> Samsung Galaxy A06</h3>
+                <img src="hinhanh\a06.jpg" width="250px">
+                <p>RAM 4GB / 128GB - Giá: 3.190.000đ</p>
+                <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+                <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+            </div>
+
+            <div class="product-item">
+                <h3> Samsung Galaxy A26 5G 6GB/128GB</h3>
+                <img src="hinhanh\a26.jpg" width="250px">
+                <p>RAM 6GB / 129GB - Giá: 6.490.000đ</p>
+                <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+                <button onclick="window.location.href='buynow.html';">Mua ngay</button>
+            </div>
+
+            <div class="product-item">
+                <h3> iPhone 16 Pro Max 256GB</h3>
+                <img src="hinhanh/16promax.jpg" width="250px">
+                <p>RAM 8GB / 129GB - Giá: 18.490.000đ</p>
+                <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+                <button onclick="window.location.href='buynow.html';">Mua ngay</button>
+            </div>
+            <div class="product-item">
+                <h3>OPPO Reno12 F 5G 12GB/256GB</h3>
+                <img src="hinhanh/oppoF5G.jpg" width="250px">
+                <p>Giá: 9.190.000đ</p>
+                <button onclick="addViewedProd(this)">Thông tin sản phầm</button>
+                <button onclick="window.location.href='buynow.html'">Mua ngay</button>
+            </div>
+        </div>
+        <h2 style="margin-left: 600px;">Sản Phẩm Gợi Ý</h2>
+        <div class="product" id="product-list">
+            <div class="product-item">
+                <h3> iPhone 16 Pro Max 256GB</h3>
+                <img src="hinhanh/16promax.jpg" width="250px">
+                <p>Giá: 18.490.000đ</p>
+                <button onclick="addViewedProd(this)" style="border-radius: 30px;">Thông tin sản phầm</button>
+                <button onclick="window.location.href='buynow.html';" style="border-radius: 30px;">Mua ngay</button>
+            </div>
+            <div class="product-item">
+                <h3> Samsung Galaxy A56 5G 8GB/128GB</h3>
+                <img src="hinhanh/a56.jpg" width="250px">
+                <p>Giá: 9.490.000đ</p>
+                <button onclick="addViewedProd(this)" style="border-radius: 30px;">Thông tin sản phầm</button>
+                <button onclick="window.location.href='buynow.html';" style="border-radius: 30px;">Mua ngay</button>
+            </div>
+            <div class="product-item">
+                <h3> Samsung Galaxy S25 Ultra 5G </h3>
+                <img src="hinhanh/s25ultra.jpg" width="250px">
+                <p>Giá: 18.490.000đ</p>
+                <button onclick="addViewedProd(this)" style="border-radius: 30px;">Thông tin sản phầm</button>
+                <button onclick="window.location.href='buynow.html';" style="border-radius: 30px;">Mua ngay</button>
+            </div>
+            <div class="product-item">
+                <h3> Xiaomi Redmi Note 14 Pro 8GB/256GB</h3>
+                <img src="hinhanh/note14.jpg" width="250px">
+                <p>Giá: 18.490.000đ</p>
+                <button onclick="addViewedProd(this)" style="border-radius: 30px;">Thông tin sản phầm</button>
+                <button onclick="window.location.href='buynow.html';" style="border-radius: 30px;">Mua ngay</button>
+            </div>
+            <div class="product-item">
+                <h3>OPPO A3x 4GB/64GB</h3>
+                <img src="hinhanh/a3x.jpg" width="250px">
+                <p>Giá: 3.490.000</p>
+                <button onclick="addViewedProd(this)" style="border-radius: 30px;">Thông tin sản phầm</button>
+                <button onclick="window.location.href='buynow.html';" style="border-radius: 30px;">Mua ngay</button>
+            </div>
+            <div class="product-item">
+                <h3> realme 13+ 5G 12GB/256GB</h3>
+                <img src="hinhanh/13+.jpg" width="250px">
+                <p>Giá: 7.790.000</p>
+                <button onclick="addViewedProd(this)" style="border-radius: 30px;">Thông tin sản phầm</button>
+                <button onclick="window.location.href='buynow.html';" style="border-radius: 30px;">Mua ngay</button>
+            </div>
+            <div class="product-item">
+                <h3> vivo V40 5G 12GB/256GB</h3>
+                <img src="hinhanh/v40.jpg" width="250px">
+                <p>Giá: 12.990.000đ</p>
+                <button onclick="addViewedProd(this)" style="border-radius: 30px;">Thông tin sản phầm</button>
+                <button onclick="window.location.href='buynow.html';" style="border-radius: 30px;">Mua ngay</button>
+            </div>
+            <div class="product-item">
+                <h3>Điện thoại iPhone 15 Pro Max 256GB</h3>
+                <img src="hinhanh/15pro.jpg" width="250px">
+                <p>Giá: 29.990.000đ</p>
+                <button onclick="addViewedProd(this)" style="border-radius: 30px;">Thông tin sản phầm</button>
+                <button onclick="window.location.href='buynow.html'" style="border-radius: 30px;">Mua ngay</button>
+            </div>
+            <div class="product-item">
+                <h3> Điện thoại iPhone 14 128GB</h3>
+                <img src="hinhanh/ip14.jpg" width="250px">
+                <p>Giá: 13.090.000đ</p>
+                <button onclick="addViewedProd(this)" style="border-radius: 30px;">Thông tin sản phầm</button>
+                <button onclick="window.location.href='buynow.html'" style="border-radius: 30px;">Mua ngay</button>
+            </div>
+            <div class="product-item">
+                <h3>Samsung Galaxy Z Fold6 5G 12GB/256GB</h3>
+                <img src="hinhanh/ssZF.jpg" width="250px">
+                <p>Giá: 35.690.000đ</p>
+                <button onclick="addViewedProd(this)" style="border-radius: 30px;">Thông tin sản phầm</button>
+                <button onclick="window.location.href='buynow.html'" style="border-radius: 30px;">Mua ngay</button>
+            </div>
+        </div>
+        <h2 style="margin-left: 600px;">Giới Thiệu Cửa Hàng</h2>
+    <div style="display: flex; align-items: center; justify-content: flex-start;">
+        <div style="margin-right: 20px;">
+          <img src="hinhanh/z6483453818737_46624a65874fa2093edc0f4e8cdaff20.jpg" width="300" height="200" style="border: 2px solid #000;">
+        </div>
+        <div style="font-size: 20px;">
+          <p>Chào mừng bạn đến với PhoneWorld - thế giới công nghệ trong tầm tay bạn!</p>
+          <p>Tại PhoneWorld, chúng tôi chuyên cung cấp các dòng điện thoại thông minh mới nhất và dịch vụ sửa chữa chuyên nghiệp.</p>
+          <p>Với cam kết về chất lượng sản phẩm, giá cả cạnh tranh và dịch vụ tận tâm, PhoneWorld luôn nỗ lực mang đến cho khách hàng những trải nghiệm mua sắm tuyệt vời nhất.</p>
+          <p>Hãy đến PhoneWorld để khám phá những xu hướng công nghệ mới nhất và chọn cho mình những sản phẩm phù hợp nhất với nhu cầu của bạn!</p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-left">
+            <p>&copy; 2025 phoneworlddemo.great-site.net - Bản quyền thuộc về chúng tôi.</p>
+            <p>Liên hệ: support@phonewrold.com</p>
+            <p>Tổng đài hỗ trợ miễn phí</p>
+            <p>Mua hàng - bảo hành: 1800.0101 (7h30 - 22h00)</p>
+            <p>Khiếu nại: 1800.0202 (8h00 - 21h30)</p>
+        </div>
+        <div class="footer-right">
+            <p>Kết nối với Phoneworld</p>
+            <div class="social-icons">
+                <img src="hinhanh/icon_fb.jpg" width="50px" alt="Facebook">
+                <img src="hinhanh/icon_zalo.jpg" width="50px" alt="Zalo">
+                <img src="hinhanh/icon_tt.jpg" width="50px" alt="Twitter">
+                <img src="hinhanh/icon_yt.jpg" width="50px" alt="Youtube">
+                <img src="hinhanh/icon_ig.jpg" width="50px" alt="Instagram">
+            </div>
+        </div>
+    </footer>
+    <script src="js/viewedProd.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
